@@ -4,15 +4,15 @@ public class DepositCalculator {
 
     double calculateDepositWithCapitalization(double depositAmount, double yearRate, int depositPeriod) {
         double pay = depositAmount * Math.pow((1 + yearRate / 12), 12 * depositPeriod);
-        return rnd(pay, 2);
+        return round(pay, 2);
     }
 
     double calculateDepositSimplePercent(double depositAmount, double yearRate, int depositPeriod) {
         double pay = depositAmount + depositAmount * yearRate * depositPeriod;
-        return rnd(pay, 2);
+        return round(pay, 2);
     }
 
-    double rnd(double value, int places) {
+    double round(double value, int places) {
         double ScaLe = Math.pow(10, places);
         return Math.round(value * ScaLe) / ScaLe;
     }
