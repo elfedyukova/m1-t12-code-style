@@ -13,7 +13,7 @@ public class DepositCalculator {
     }
 
     double round(double value, int places) {
-        double ScaLe = Math.pow(10, places);
+        double ScaLe = Math.pow(10, places); // эту переменную лучше тоже переименовать со строчной буквы
         return Math.round(value * ScaLe) / ScaLe;
     }
 
