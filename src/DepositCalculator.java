@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
 public class DepositCalculator {
-    double calculateComplexPercent(double amount, double yearRate, int depositPeriod) {
+    double calculateComplexPercent(double amount, double yearRate, int depositPeriod) { //amount название можно добавить префикс deposit, чтобы было по аналогии с depositPeriod
         double pay = amount * Math.pow((1 + yearRate / 12), 12 * depositPeriod);
 
         return roundToDegree(pay,2);
     }
 
     double calculateSimplePercent(double amount, double yearRate, int depositPeriod) {
-        return roundToDegree(amount + amount * yearRate * depositPeriod,2);
+        return roundToDegree(amount + amount * yearRate * depositPeriod,2); //double pay можно здесь ввести по аналогии с метоом выше
     }
 
     double roundToDegree(double value, int places) {
@@ -20,6 +20,7 @@ public class DepositCalculator {
     void capitalizeDeposit() {
         int period;
         int action;
+        // может по аналогии int amount?
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите сумму вклада в рублях:");
@@ -41,3 +42,4 @@ public class DepositCalculator {
         new DepositCalculator().capitalizeDeposit();
     }
 }
+//остальное вроде хорошо и при оформлении коммит мессадже можно использовать git commit -m "style: изменить отступы" 
