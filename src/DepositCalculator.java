@@ -13,8 +13,8 @@ public class DepositCalculator {
     }
 
     double round(double value, int places) {
-        double ScaLe = Math.pow(10, places); // эту переменную лучше тоже переименовать со строчной буквы
-        return Math.round(value * ScaLe) / ScaLe;
+        double scaLe = Math.pow(10, places);
+        return Math.round(value * scaLe) / scaLe;
     }
 
     void calculatePercentages() {
